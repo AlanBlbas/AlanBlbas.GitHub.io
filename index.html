@@ -360,7 +360,7 @@
           </div>
 
           <div class="col-lg-7">
-            <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="contact-form" class="php-email-form" action="assets/vendor/php-email-form/handler.php" method="post" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -437,9 +437,29 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("WVuI6si8M0f6gmZCe"); // Initialize with your Public Key
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const serviceID = "service_4psye28"; // Your Service ID
+      const templateID = "template_kclxcz5"; // Your Template ID
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          alert("Your message has been sent successfully!");
+          document.getElementById("contact-form").reset();
+        }, (err) => {
+          alert("Failed to send the message. Please try again later.");
+          console.error("EmailJS Error:", err);
+        });
+    });
+  </script>
 
   <style>
     /* Floating animation for dynamic elements */
