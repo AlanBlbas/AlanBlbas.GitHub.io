@@ -74,29 +74,22 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section position-relative d-flex align-items-center justify-content-center shrinkable-hero" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('assets/img/data-analyst-colleagues-in-office.jpeg') center/cover no-repeat;">
-
-      <div class="container position-relative text-center text-white" style="z-index: 2;" data-aos="fade-up" data-aos-delay="100">
-        <h1 class="display-4 fw-bold">Welcome to Alan Blbas's Portfolio</h1>
-        <p class="lead mt-3">Empowering businesses with data-driven insights and strategies.</p>
-        <div class="mt-4">
-    
-        <p class="text-light mt-4" style="font-size: 1.2rem;">
-          I'm <span class="typed" data-typed-items="Data Analyst, Business Intelligence, Project Manager, Event Manager"></span>
-        </p>
-        <div class="mt-4">
-          <a href="#portfolio" class="btn btn-primary btn-lg me-3">Explore My Work</a>
-          <a href="#contact" class="btn btn-outline-light btn-lg">Get in Touch</a>
+    <section id="hero" class="hero section d-flex align-items-center justify-content-center" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('assets/img/data-analyst-colleagues-in-office.jpeg') center/cover no-repeat;">
+      <div class="container text-center text-white">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="display-3 fw-bold mb-4">Welcome to Alan Blbas's Portfolio</h1>
+            <p class="lead mb-4">Empowering businesses with data-driven insights and strategies.</p>
+            <p class="text-light mb-4" style="font-size: 1.2rem;">
+              I'm <span class="typed" data-typed-items="Data Analyst, Business Intelligence, Project Manager, Event Manager"></span>
+            </p>
+            <div class="d-flex justify-content-center">
+              <a href="#portfolio" class="btn btn-primary btn-lg me-3">Explore My Work</a>
+              <a href="#contact" class="btn btn-outline-light btn-lg">Get in Touch</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Dynamic Animation -->
-      <div class="hero-animation position-absolute w-100 h-100" style="top: 0; left: 0; z-index: 1;">
-        <div class="floating-circle" style="position: absolute; width: 150px; height: 150px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; top: 20%; left: 10%; animation: float 6s ease-in-out infinite;"></div>
-        <div class="floating-circle" style="position: absolute; width: 100px; height: 100px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; top: 50%; left: 70%; animation: float 8s ease-in-out infinite;"></div>
-        <div class="floating-circle" style="position: absolute; width: 120px; height: 120px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; top: 80%; left: 30%; animation: float 10s ease-in-out infinite;"></div>
-      </div>
-
     </section><!-- /Hero Section -->
 
     <!-- ======= Portfolio Section ======= -->
@@ -252,7 +245,7 @@
           </div><!-- End Skill Item -->
 
           <!-- Skill Item -->
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md=6">
             <div class="skill-card shadow-sm rounded text-center p-4">
               <i class="bi bi-graph-up skill-icon mb-3" style="font-size: 2.5rem; color: #dc3545;"></i>
               <h4>SPSS</h4>
@@ -308,7 +301,7 @@
         <p style="font-size: 1.2rem; line-height: 1.5; margin-bottom: 15px;">
           Beyond the numbers, I’m passionate about bridging the gap between data and decision-making. I believe that every dataset has a story to tell, and my mission is to bring those stories to life in ways that inspire action. Let’s connect and explore how we can transform your data into a powerful tool for success!
         </p>
-        <a href="#contact" class="btn btn-primary mt-3">Let’s Collaborate</a>
+        <a href="#contact" class="btn btn-primary btn-lg">Let’s Collaborate</a>
       </div>
     </div>
 
@@ -457,6 +450,32 @@
       50% {
         transform: translateY(-20px);
       }
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-outline-light:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .btn-outline-light:hover {
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .explore-btn, .contact-btn {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
     }
   </style>
 

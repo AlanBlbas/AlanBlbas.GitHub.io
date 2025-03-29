@@ -77,6 +77,46 @@ a:hover {
   text-decoration: none;
 }
 
+/* Ensure no conflicting styles for anchor links */
+a {
+  text-decoration: none;
+}
+
+a[href^="#"] {
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  color: var(--contrast-color);
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline-light {
+  border: 2px solid var(--contrast-color);
+  color: var(--contrast-color);
+  padding: 12px 24px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-light:hover {
+  background-color: var(--contrast-color);
+  color: #000;
+}
+
 h1,
 h2,
 h3,
@@ -635,6 +675,51 @@ section,
 
 .shrinkable-hero.shrunk .container {
   transform: scale(0.6);
+}
+
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--contrast-color);
+}
+
+#hero p {
+  font-size: 1.2rem;
+  color: var(--contrast-color);
+}
+
+#hero .btn-primary {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#hero .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+#hero .btn-outline-light {
+  border: 2px solid var(--contrast-color);
+  color: var(--contrast-color);
+  padding: 12px 24px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#hero .btn-outline-light:hover {
+  background-color: var(--contrast-color);
+  color: #000;
 }
 
 /*--------------------------------------------------------------
