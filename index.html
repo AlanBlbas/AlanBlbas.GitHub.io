@@ -451,7 +451,41 @@
   </script>
 
   <style></style>
+    /* Floating animation for dynamic elements */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
 
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-outline-light:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .btn-outline-light:hover {
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .explore-btn, .contact-btn {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
   </style>
 
 </body>
